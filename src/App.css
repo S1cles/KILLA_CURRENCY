@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -11,15 +11,12 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400;500;600;700&display=swap');
 
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -36,3 +33,58 @@
     transform: rotate(360deg);
   }
 }
+.customInput {
+  display: flex;
+}
+h1 {
+  background: #282c34;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  color: #61dafb;
+  /* font-family: 'Signika Negative', sans-serif; */
+}
+
+h6{
+  text-align: center;
+  color: #61dafb;
+}
+input {
+  all: unset;
+  padding: 30px;
+  background: #363b46;
+  color: whitesmoke;
+  width: 100%;
+  font-size: 42px;
+  border: none;
+  text-align: end;
+  font-family: 'Signika Negative', sans-serif;
+  text-shadow: 0 0 0 #2196f3;
+  caret-color: transparent;
+  
+}
+input:focus {
+  outline: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+select {
+  padding: 20px;
+  color:   whitesmoke;
+  background: #363b46;
+  font-family: 'Signika Negative', sans-serif;
+  border: none;
+}
+select:focus,
+select:active {
+  outline: none;
+}
+
+
