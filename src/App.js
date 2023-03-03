@@ -75,6 +75,8 @@ const cutNum = (num) =>{
     }
   }, [ rates ])
 
+
+
   // useEffect(()=>{
   //   axios.get('https://api.freecurrencyapi.com/v1/status?apikey=iXsawZKVBpLT6WbyD8jrEBNqKPtxXEdQtAzt7oWD')
   //   .then(response=>{
