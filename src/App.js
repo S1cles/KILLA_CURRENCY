@@ -9,13 +9,13 @@ import axios from 'axios';
 
 function App() {
   const [rates, setRates] = useState([]);
-  // const [status , setStatus] =useState(Number)
+  const [dateRates , setDateRates] =useState('')
 
   const [quantity1, setQuantity1] = useState(1);
   const [quantity2, setQuantity2] = useState(1);
   const [quantity3, setQuantity3] = useState(1);
 
-  const [currency1, setCurrency1] = useState('EUR');
+  const [currency1, setCurrency1] = useState('USD');
   const [currency2, setCurrency2] = useState('UAH');
   const [currency3, setCurrency3] = useState('PLN');
 
@@ -63,8 +63,8 @@ const cutNum = (num) =>{
   useEffect(() => {
     axios.get('https://api.exchangerate.host/latest')
       .then(response => {
-    console.log(response.data.rates)
         setRates(response.data.rates)
+        setDateRates(response.data.date)
       })
   },[]);
 
@@ -86,7 +86,7 @@ const cutNum = (num) =>{
 
   return (
     <div className="App">
-      <h1>killaCurrency</h1>
+      <img width={100} src="/LOGO.png" alt="" />
       <header className="App-header">
         <InputCurrency
           quantityChange={handleQuan1}
@@ -109,7 +109,7 @@ const cutNum = (num) =>{
           currencies={Object.keys(rates)}
           currency={currency3}
         />
-        {/* <h6>{status}</h6> */}
+        <h6>{`Rates refreshed: ${dateRates}`}</h6>
       </header>
     </div>
   );

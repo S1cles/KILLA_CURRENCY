@@ -1,8 +1,10 @@
-/* .App {
-  text-align: center;
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.App-logo {
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -49,7 +51,7 @@ h1 {
 
 h6{
   text-align: center;
-  color: #61dafb;
+  color: #363B46;
 }
 input {
   all: unset;

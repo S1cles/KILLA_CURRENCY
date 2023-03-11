@@ -2,14 +2,14 @@ import React from "react";
 import PropTypes from 'prop-types'
 
 const InputCurrency = (props) => {
-  function moveCursorToEnd(el) {
-    el.selectionStart = el.selectionEnd = el.value.length;
+  function moveCursorToEnd(element) {
+    element.selectionStart = element.selectionEnd = element.value.length;
   }
   return (
-    <div className="customInput">
+    <div className="customInput" >
       <select value={props.currency} onChange={e=>props.currencyChange(e.target.value)}>
-        {props.currencies.map((currency => (
-          <option value={currency}>
+        {props.currencies.map(((currency, index) => (
+          <option value={currency} key={index}>
             {currency}
           </option>
         )))}
